@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">Navegador EinkBro</string>
+    <string name="list_empty">La lista actual está vacía</string>
+    <string name="bookmarks">Marcadores</string>
+    <string name="album_title_history">Historial</string>
+    <string name="album_title_home">Inicio</string>
+    <string name="search_hint">Búsqueda</string>
+    <!-- Menu -->
+    <string name="main_menu_new_tab">Nueva pestaña (de fondo)</string>
+    <string name="main_menu_new_tabOpen">Nueva pestaña (primer plano)</string>
+    <string name="main_omnibox_input_hint">Buscar o escribir URL</string>
+    <string name="menu_open_with">Abrir enlace con …</string>
+    <string name="menu_quit">Salir</string>
+    <string name="menu_openFav">Abrir favoritos</string>
+    <string name="menu_delete">Borrar</string>
+    <string name="menu_delete_list">Borrar lista</string>
+    <string name="menu_edit">Editar</string>
+    <string name="menu_closeTab">Cerrar pestaña</string>
+    <string name="menu_download">Abrir descargas</string>
+    <string name="menu_fav">Guardar como página de inicio</string>
+    <string name="menu_sc">Agregar a la pantalla principal</string>
+    <string name="menu_share_link">Compartir enlace</string>
+    <string name="menu_save_screenshot">Guardar captura</string>
+    <string name="menu_save_bookmark">Guardar como marcador</string>
+    <string name="menu_save_as">Guardar como …</string>
+    <string name="menu_save_pdf">Guardar como PDF</string>
+    <string name="menu_shareClipboard">Copiar al portapapeles</string>
+    <string name="menu_other_searchSite">Buscar en sitio web</string>
+    <string name="menu_other_info">Acerca de \"Navegador EinkBro\"</string>
+    <!-- Dialog -->
+    <string name="dialog_title_hint">Título de entrada</string>
+    <string name="dialog_url_hint">URL:</string>
+    <string name="dialog_extension_hint">Extensión (por ejemplo: \".jpg\"):</string>
+    <string name="dialog_title_download">¿Desea descargar el archivo?</string>
+    <string name="dialog_content_resubmission">¿Desea reenviar sus datos?</string>
+    <!-- Settings -->
+    <string name="setting_label">Configuración</string>
+    <!-- browser setting -->
+    <string name="setting_title_clear_control">Control de datos</string>
+    <string name="setting_title_start_control">Control del inicio</string>
+    <string name="setting_title_search_engine">Motor de búsqueda</string>
+    <string name="setting_summary_search_engine_google">Google</string>
+    <string name="setting_summary_search_engine_duckduckgo">DuckDuckGo</string>
+    <string name="setting_summary_search_engine_startpage">Página de Inicio</string>
+    <string name="setting_summary_search_engine_bing">Bing</string>
+    <string name="setting_summary_search_engine_baidu">Baidu</string>
+    <string name="setting_summary_search_engine_startpage_de">StartPage (de)</string>
+    <string name="setting_summary_search_engine_searx">Searx</string>
+    <string name="setting_summary_search_engine_qwant">Qwant</string>
+    <string name="setting_summary_search_engine_ecosia">Ecosia</string>
+    <string name="setting_title_font_size">Tamaño de fuente</string>
+    <string name="setting_summary_font_size">Ajustar el tamaño del texto en sitios web.</string>
+    <string name="setting_title_remote">Contenido remoto</string>
+    <string name="setting_summary_remote">Habilitar el contenido no alojado en el sitio web que está visitando. Desactivarlo es más seguro, rápido y ahorra consumo de datos. Pero no se mostrarán algunos contenidos.</string>
+    <string name="setting_title_save_data">Solicitar \"reducir datos\"</string>
+    <string name="setting_summary_save_data">Establecer que prefiere reducir el consumo de datos. Los sitios web soportados se cargarán más rápido.</string>
+    <!-- browser start -->
+    <string name="setting_title_images">Imágenes</string>
+    <string name="setting_summary_images">Habilitar imágenes. Desactivarlo podría ser útil para ahorrar datos móviles y acelerar la carga de sitios web.</string>
+    <string name="setting_title_cookie">Cookies</string>
+    <string name="setting_summary_cookie_delete">Si está activado, se borrarán todas las cookies. Incluyendo las de sitios web de confianza.</string>
+    <string name="setting_summary_cookie">Habilitar cookies. Son archivos de texto pequeños, que se almacenan en el dispositivo. Los sitios web pueden utilizarlas para almacenar la configuración del usuario (ej. conf. de búsqueda). Pero también para recopilar datos personales. Las cookies de terceros (publicitarias) siempre están deshabilitadas.</string>
+    <string name="setting_title_whitelistCookie">Lista blanca de cookies</string>
+    <string name="setting_summary_whitelistCookie">Si deshabilita las cookies, puede utilizar esta lista para permitir que algunos sitios las guarden.</string>
+    <string name="setting_title_javascript">JavaScript</string>
+    <string name="setting_summary_javascript">Activar JavaScript. Muchos sitios web lo necesitan (ej. menús, carga y visualización de imágenes). Pero también puede ser utilizado para explotar vulnerabilidades.</string>
+    <string name="setting_title_whitelistJS">Lista blanca de JavaScript</string>
+    <string name="setting_summary_whitelistJS">Si deshabilita JavaScript, puede utilizar esta lista para permitir que algunos sitios lo utilicen.</string>
+    <string name="setting_title_adblock">Bloqueador de anuncios</string>
+    <string name="setting_summary_adblock">Activar para bloquear anuncios molestos. También provocará que los sitios se carguen más rápido.</string>
+    <string name="setting_title_whitelist">Lista blanca de anuncios</string>
+    <string name="setting_summary_whitelist">Permitir que estos sitios muestren anuncios. El bloqueador de anuncios puede provocar errores en algunos sitios web.</string>
+    <string name="setting_title_location">Ubicación</string>
+    <string name="setting_summary_location">Permitir que los sitios web accedan a su ubicación. Algunos lo necesitan (como Google Maps para la navegación).</string>
+    <string name="setting_title_history">Historial</string>
+    <string name="setting_summary_history">Guardar el historial de sitios web visitados.</string>
+    <!-- browser clear -->
+    <string name="data_summary">Todos los archivos se exportarán al directorio \"Android/data/info.plateaukao.einkbro/files/browser_backup/\".
+Si desinstala la aplicación, el mismo será eliminado. Por tanto se recomienda realizar copias de seguridad de este directorio.</string>
+    <string name="clear_title_quit">Limpiar al salir de la aplicación</string>
+    <string name="clear_summary_quit">Cada vez quesalga del \"Navegador EinkBro\", se borrarán todos los ítems tildados anteriormente.</string>
+    <string name="clear_title_cache">Borrar caché</string>
+    <string name="clear_title_cookie">Borrar cookies</string>
+    <string name="clear_title_history">Borrar el historial</string>
+    <string name="clear_title_indexedDB">Borrar \"BD indexadas\" y \"almacen. local de WebView\"</string>
+    <string name="clear_title_deleteDatabase">Borrar base de datos</string>
+    <string name="clear_summary_deleteDatabase">Elimine todos los datos del navegador (página de inicio, marcadores, historial y todas las listas blancas).</string>
+    <!-- App setting -->
+    <string name="setting_title_ui">Comportamiento/IU</string>
+    <string name="setting_title_data">Respaldos</string>
+    <string name="setting_title_fav">Favorito</string>
+    <string name="setting_title_searchEngine">Motor de búsqueda personalizado</string>
+    <string name="setting_title_userAgent">Agente de usuario personalizado</string>
+    <!-- App behavior -->
+    <string name="setting_title_hideToolbar">Ocultar barra de herramientas</string>
+    <string name="setting_summary_hide">Utilice la pantalla completa al desplazarse por sitios web. Si pulsa el botón \"volver\", dejará el modo de pantalla completa.</string>
+    <string name="setting_title_theme">Interfaz de usuario</string>
+    <string name="setting_title_behavior">Comportamiento</string>
+    <string name="setting_summary_toolbarShow">Presionar \"volver\" hará visible la barra de herramientas, antes de retroceder en el historial.</string>
+    <string name="setting_title_toolbarShow">Primero la barra de herramientas</string>
+    <string name="setting_title_nav">Botón de navegación</string>
+    <string name="setting_title_nav_pos">Posición</string>
+    <string name="setting_summary_nav_pos">Decida dónde se colocará el \"botón de navegación\".</string>
+    <string name="setting_summary_nav_pos_right">Derecha</string>
+    <string name="setting_summary_nav_pos_left">Izquierda</string>
+    <string name="setting_summary_nav_pos_center">Centro</string>
+    <string name="setting_summary_tab">Lo que debe mostrarse en la vista general. La página de inicio, los marcadores, …</string>
+    <string name="setting_title_confirm_tab_close">Confirmar cerrado de pestañas</string>
+    <string name="setting_summary_confirm_tab_close">Mostrar un diálogo de confirmación al cerrar pestañas.</string>
+    <string name="setting_overView">Vista general</string>
+    <string name="setting_gestures">Gestos</string>
+    <string name="setting_gestures_use_title">Usar gestos</string>
+    <string name="setting_gestures_use_summary">Usar gestos en la barra de herramientas y en el \"botón de navegación\".</string>
+    <!-- gestures -->
+    <string name="setting_title_toolbar">Barra de herramientas</string>
+    <string name="setting_gesture_up">Deslizar hacia arriba</string>
+    <string name="setting_gesture_down">Deslizar hacia abajo</string>
+    <string name="setting_gesture_left">Deslizar a la izquierda</string>
+    <string name="setting_gesture_right">Deslizar a la derecha</string>
+    <string name="nothing">No hacer nada</string>
+    <string name="forward_in_history">Avanzar en el historial</string>
+    <string name="back_in_history">Retroceder en el historial</string>
+    <string name="scroll_to_top">Desplazarse hacia arriba</string>
+    <string name="scroll_to_bottom">Desplazarse hacia abajo</string>
+    <string name="switch_to_left_tab">Cambiar a pestaña a la izquierda</string>
+    <string name="switch_to_right_tab">Cambiar a pestaña a la derecha</string>
+    <string name="show_overview">Mostrar vista general</string>
+    <string name="open_new_tab">Abrir nueva pestaña</string>
+    <string name="close_tab">Cerrar pestaña</string>
+    <!-- Data -->
+    <string name="export_whitelistAdBlock">exportar_listablanca_anuncios</string>
+    <string name="export_whitelistJS">exportar_listablanca_javascript</string>
+    <string name="export_whitelistCookie">exportar_listablanca_cookies</string>
+    <string name="setting_title_export_appData">Exportar datos de la aplicación</string>
+    <string name="setting_title_import_appData">Importar datos de la aplicación</string>
+    <string name="setting_summary_export_appData">Exporta la página de inicio, previsualizaciones, historial, marcadores, y sus ajustes personales.</string>
+    <string name="title_appData">Datos de la aplicación</string>
+    <string name="hint_database">Esto borrará todas sus configuraciones y datos actuales. ¿Quiere proceder?</string>
+    <!-- Others setting -->
+    <string name="setting_title_license">Licencia</string>
+    <!-- Toast -->
+    <string name="toast_add_whitelist_successful">Dominio agregado con éxito</string>
+    <string name="toast_copy_successful">Copiado con éxito</string>
+    <string name="toast_delete_successful">Eliminado con éxito</string>
+    <string name="toast_domain_already_exists">El dominio ya existe</string>
+    <string name="toast_export_successful">Exportado como: </string>
+    <string name="toast_export_failed">No se pudo exportar</string>
+    <string name="toast_import_successful">Cuenta importada: </string>
+    <string name="toast_import_failed">No se pudo importar</string>
+    <string name="toast_input_empty">No ha introducido nada</string>
+    <string name="toast_invalid_domain">Dominio no válido</string>
+    <string name="toast_load_error">No se puede cargar esta dirección URL</string>
+    <string name="toast_share_failed">No se puede compartir esta página</string>
+    <string name="toast_start_download">Iniciando descarga</string>
+    <string name="toast_wait_a_minute">Por favor, espere un momento</string>
+    <string name="toast_error">Uuups. Algo salió mal.</string>
+    <string name="toast_edit_successful">Guardado con éxito</string>
+    <string name="toast_webview_forward">No se puede cargar el sitio</string>
+    <string name="toast_restart">Debe reiniciar \"Navegador EinkBro\" para aplicar cambios. ¿Cerrar ahora?</string>
+    <string name="toast_close_tab">¿Desea cerrar la pestaña actual?</string>
+    <string name="toast_downloadComplete">Descarga completa. ¿Abrir el gestor de archivos?</string>
+    <string name="toast_backup">¿Respaldar datos? Esto sobrescribirá el respaldo anterior.</string>
+    <!-- Whitelist -->
+    <string name="whitelist_menu_clear">Limpiar</string>
+    <string name="whitelist_edit_hint">Dominio</string>
+    <string name="whitelist_add">Añadir</string>
+    <string name="touch_area_long">Two sides</string>
+    <string name="setting_title_gpt_action_list">ChatGPT action definition</string>
+    <string name="setting_summary_gpt_action_list">Define different prompts for different ChatGPT actions.</string>
+    <string name="gpt_actions_title">ChatGPT Actions</string>
+    <!-- Dialog help -->
+    <!-- Dialog changelog -->
+    <!-- License changelog -->
+</resources>

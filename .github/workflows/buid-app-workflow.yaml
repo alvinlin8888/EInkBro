@@ -1,0 +1,21 @@
+name: Build
+on: [pull_request, push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+      - name: Decode Keystore
+        uses: timheuer/base64-to-file@v1
+        id: android_keystore
+        with:
+            fileName: "android_keystore.keystore"
+            encodedString: ${{ secrets.KEYSTORE }}
+      - name: Build the app
+        run: ./gradlew assembleRelease -Pandroid.injected.signing.store.file=${{ steps.android_keystore.outputs.filePath }} -Pandroid.injected.signing.store.password=${{ secrets.PASSWORD }} -Pandroid.injected.signing.key.alias=${{ secrets.ALIAS }} -Pandroid.injected.signing.key.password=${{ secrets.PASSWORD }}
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+            name: app-release.apk
+            path: app/build/outputs/apk/release/app-release.apk

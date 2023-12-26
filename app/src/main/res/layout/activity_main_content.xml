@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/activity_main">
+
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/backgroundColor" />
+
+    <View
+        android:id="@+id/touch_area_middle_left"
+        android:layout_width="150dp"
+        android:layout_height="250dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="-1dp"
+        android:background="@drawable/touch_area_border"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/touch_area_long_left"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="-5dp"
+        android:layout_marginTop="-5dp"
+        android:layout_marginBottom="-5dp"
+        android:background="@drawable/touch_area_border"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/touch_area_bottom_left"
+        android:layout_width="150dp"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="-2dp"
+        android:layout_marginBottom="-2dp"
+        android:background="@drawable/touch_area_border"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/touch_area_middle_right"
+        android:layout_width="150dp"
+        android:layout_height="250dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="-2dp"
+        android:background="@drawable/touch_area_border"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/touch_area_long_right"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="-5dp"
+        android:layout_marginRight="-5dp"
+        android:layout_marginBottom="-5dp"
+        android:background="@drawable/touch_area_border"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/touch_area_middle_drag"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/touch_area_middle_right"
+        android:layout_alignTop="@+id/touch_area_middle_right"
+        android:layout_marginLeft="-20dp"
+        android:layout_marginTop="-20dp"
+        android:background="@android:color/transparent"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/touch_area_bottom_right"
+        android:layout_width="150dp"
+        android:layout_height="250dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="-2dp"
+        android:layout_marginBottom="-2dp"
+        android:background="@drawable/touch_area_border"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/touch_area_bottom_drag"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/touch_area_bottom_right"
+        android:layout_alignTop="@+id/touch_area_bottom_right"
+        android:layout_marginLeft="-20dp"
+        android:layout_marginTop="-20dp"
+        android:background="@android:color/transparent"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/touch_area_right_1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="-1dp"
+        android:layout_marginBottom="150dp"
+        android:background="@drawable/touch_area_border"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/touch_area_right_2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="-1dp"
+        android:layout_marginBottom="-2dp"
+        android:background="@drawable/touch_area_border"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/touch_area_right_drag"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/touch_area_right_1"
+        android:layout_alignTop="@+id/touch_area_right_1"
+        android:layout_marginLeft="-20dp"
+        android:layout_marginTop="-20dp"
+        android:background="@android:color/transparent"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/touch_area_left_1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginBottom="150dp"
+        android:background="@drawable/touch_area_border"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/touch_area_left_2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginBottom="-2dp"
+        android:background="@drawable/touch_area_border"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/touch_area_left_drag"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/touch_area_left_1"
+        android:layout_alignRight="@+id/touch_area_left_1"
+        android:layout_marginTop="-20dp"
+        android:layout_marginRight="-20dp"
+        android:background="@android:color/transparent"
+        android:visibility="invisible" />
+
+    <ProgressBar
+        android:id="@+id/main_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_alignParentBottom="true"
+        android:maxHeight="4dp"
+        android:progressTint="?attr/colorControlNormal"
+        tools:progress="30" />
+
+    <TextView
+        android:id="@+id/fab_imageButtonNav"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignBottom="@+id/main_content"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/roundcorner"
+        android:gravity="center"
+        android:shadowColor="@android:color/white"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.6"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="22sp"
+        android:tint="@android:color/darker_gray"
+        android:visibility="gone"
+        app:borderWidth="1dp"
+        app:srcCompat="@drawable/icon_overflow_fab"
+        tools:ignore="RelativeOverlap"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/translation_language"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="0.5dp"
+        android:background="@drawable/background_with_border"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:tint="?attr/colorControlNormal"
+        android:visibility="gone"
+        tools:text="zh" />
+
+    <ImageButton
+        android:id="@+id/remote_text_search"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="0.5dp"
+        android:background="@drawable/background_with_border"
+        android:src="@drawable/icon_search"
+        app:tint="?attr/colorControlNormal" />
+
+    <ImageButton
+        android:id="@+id/external_search_close"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="0.5dp"
+        android:background="@drawable/background_with_border"
+        android:src="@drawable/ic_minimize"
+        android:visibility="invisible"
+        app:tint="?attr/colorControlNormal" />
+</RelativeLayout>

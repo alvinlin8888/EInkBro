@@ -1,0 +1,168 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'org.jetbrains.kotlin.plugin.serialization'
+
+
+def getCurrentTimestamp() {
+    return new Date().format('MMddHHmm')
+}
+
+android {
+    compileSdk 33
+    buildToolsVersion = '33.0.0'
+
+    signingConfigs {
+        g3 {
+            storeFile file('../../platform_lsm_g3.keystore') // OK!
+            //storeFile file('../../platform_lsm_g3_launcher.keystore') // NG!
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storePassword 'android'
+        }
+    }
+
+    defaultConfig {
+        applicationId "info.plateaukao.einkbro"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 10_15_02
+        versionName "10.15.2"
+        vectorDrawables.useSupportLibrary = true
+
+        buildConfigField("String", "builtDateTime", "\"${getCurrentTimestamp()}\"")
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+    }
+
+
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.g3
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.g3
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.txt'
+        }
+        /*
+        releaseDebuggable {
+            debuggable true
+            minifyEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.g3
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        */
+    }
+
+    buildFeatures {
+        viewBinding = true
+        compose true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.4.0'
+    }
+
+    lint {
+        checkReleaseBuilds false
+        disable 'MissingTranslation'
+    }
+    namespace 'info.plateaukao.einkbro'
+}
+
+dependencies {
+    implementation 'com.google.android.material:material:1.6.1'
+
+    // epublib
+    implementation("com.positiondev.epublib:epublib-core:3.1") {
+        exclude group: 'org.slf4j'
+        exclude group: 'xmlpull'
+    }
+    implementation 'org.slf4j:slf4j-api:1.7.32'
+    //
+
+    // common lang
+    implementation 'org.apache.commons:commons-text:1.9'
+
+    // for epub saving: html processing
+    implementation 'org.jsoup:jsoup:1.15.3'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    implementation "androidx.room:room-runtime:2.5.1"
+    implementation "androidx.room:room-ktx:2.5.1"
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
+    implementation 'androidx.activity:activity-compose:1.7.0'
+    implementation "androidx.compose.ui:ui:$compose_ui_version"
+    implementation 'androidx.navigation:navigation-runtime-ktx:2.5.3'
+    implementation "androidx.navigation:navigation-compose:2.5.3"
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+
+    debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
+    kapt "androidx.room:room-compiler:2.5.1"
+
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+
+    // for dark mode
+    implementation 'androidx.webkit:webkit:1.6.1' //AL-20231003-
+    //implementation 'androidx.webkit:webkit:1.7.0' //AL-20231003+
+
+    def koin_version = "3.1.2"
+    // Koin core features
+    implementation "io.insert-koin:koin-core:$koin_version"
+    // Koin test features
+    testImplementation "io.insert-koin:koin-test:$koin_version"
+    // Android
+    implementation "io.insert-koin:koin-android-compat:$koin_version"
+
+    // memory leak detection
+    //debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
+
+    // compose
+    // Compose Material Design
+    implementation 'androidx.compose.material:material:1.3.0-beta03'
+    // Tooling support (Previews, etc.)
+    debugImplementation 'androidx.compose.ui:ui-tooling:1.3.0-beta03'
+    implementation "androidx.compose.ui:ui-tooling-preview:1.3.0-beta03"
+    // UI Tests
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4:1.5.0-alpha01'
+
+    implementation "com.google.accompanist:accompanist-drawablepainter:0.31.0-alpha"
+
+    // reorder lazylist
+    implementation "org.burnoutcrew.composereorderable:reorderable:0.9.6"
+
+    // okhttp
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0' //AL-20231003-
+    implementation 'com.squareup.okhttp3:okhttp-sse:4.11.0' //AL-20231003-
+    //implementation 'com.squareup.okhttp3:okhttp:4.12.0' //AL-20231003+
+    //implementation 'com.squareup.okhttp3:okhttp-sse:4.12.0' //AL-20231003+
+    //kapt 'com.github.bumptech.glide:compiler:4.12.0' //AL-20231003+
+    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0'
+
+    // eink gamma library, //AL-20231003+
+    //implementation files('libs/GammaController_s.jar')
+}
